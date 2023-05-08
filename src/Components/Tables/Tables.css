@@ -1,0 +1,115 @@
+:root {
+  --color-01: #f9f9f9;
+  --color-02: #fff;
+  --color-03: #f1f1f1;
+  --color-04: #000;
+}
+
+table {
+  margin-bottom: 15px;
+}
+table tbody tr:nth-child(even) {
+  animation-timing-function: ease-in-out;
+  background-color: var(--color-02);
+  transition: background-color 1s;
+}
+table tbody tr:nth-child(even):hover {
+  background-color: var(--color-03);
+  transition: background-color .3s;
+}
+table tbody tr:nth-child(odd) {
+  animation-timing-function: ease-in-out;
+  background-color: var(--color-01);
+  transition: background-color 1s;
+}
+table tbody tr:nth-child(odd):hover {
+  background-color: var(--color-03);
+  transition: background-color .3s;
+}
+table th {
+  font-weight: 900;
+}
+table th > div {
+  column-gap: 5px;
+  display: flex;
+  flex-direction: row;
+}
+table tbody td {
+  border-top: solid 1px var(--color-04);
+}
+table tbody td:first-child {
+  background-color: var(--color-03);
+}
+table tfoot td:first-child {
+  text-align: left;
+}
+table tfoot td:last-child {
+  text-align: right;
+}
+table tfoot button:not(:first-child) {
+  margin-left: 10px;
+}
+table tfoot .next,
+table tfoot .previous {
+  color: #0000EE;
+  text-decoration: underline;
+}
+table th,
+table td {
+  /* padding: 8px 10px; */
+  padding: 4px 5px;
+}
+
+/* Sortable BUTTON */
+table button {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+
+  padding: 0;
+}
+
+table button[disabled] {
+  color: var(--color-04);
+  font-style: italic;
+  font-weight: 900;
+  pointer-events: none;
+}
+
+/* Sortable TH */
+table th {
+  font-weight: 600;
+}
+table th > div {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+/* Sortable .sorter */
+.sorter {
+  align-self: baseline;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.sorter .currentSort {
+  color: gray;
+}
+
+/* Columns sizes */
+.dateOfBirth,
+.startDate {
+  width: 70px;
+}
+.department {
+  width: 100px;
+}
+.state,
+.zipCode {
+  width: 55px;
+}

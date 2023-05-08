@@ -1,0 +1,42 @@
+.createEmployee {
+  margin: 0 auto;
+  width: 300px;
+}
+.createEmployee form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.createEmployee form > div,
+.createEmployee form > div .react-datepicker__input-container,
+.createEmployee form > fieldset > div  {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.createEmployee form > div:not(:last-child),
+.createEmployee form > fieldset,
+.createEmployee form > fieldset > div:not(:last-child) {
+  margin-bottom: 15px;
+}
+.createEmployee form div label {
+  margin-bottom: 5px;
+}
+.createEmployee form fieldset {
+  border: solid 1px #000;
+
+  padding: 15px;
+}
+.createEmployee span.required {
+  display: none;
+}
+/* .createEmployee .required,
+.createEmployee input:invalid {
+  border-color: salmon;
+} */
+.createEmployee [required] + label .required {
+  display: inline-block;
+}
+.createEmployee input[type="button"] {
+  margin: 15px 0;
+}

@@ -1,0 +1,21 @@
+.employeeList {
+  display: flex;
+  flex-direction: column;
+}
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+form > div {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+form .react-select {
+  margin: 0 5px;
+}
+form input {
+  margin-left: 5px;
+}
