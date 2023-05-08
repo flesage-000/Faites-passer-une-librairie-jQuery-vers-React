@@ -54,6 +54,7 @@ function Tables(data) {
    */
   function handleSort(sortType) {
     let dataToSort = [...employees];
+    // eslint-disable-next-line
     dataToSort.sort((a, b) => {
       if (sortType === "firstNameASC") return a.firstName.localeCompare(b.firstName)
       else if (sortType === "firstNameDESC") return b.firstName.localeCompare(a.firstName)
@@ -86,6 +87,7 @@ function Tables(data) {
     let dataToSearch = [...employees];
     if (value.length >= 2) {
       let newObject = [];
+      // eslint-disable-next-line
       dataToSearch.filter((data) => {
         if (  data.firstName.toLowerCase().includes(value)
               || data.lastName.toLowerCase().includes(value)
